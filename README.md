@@ -35,6 +35,7 @@ Install the package through composer
 ```composer require machaven/laravel-cascading-config```
 
 After installing, add the ServiceProvider to the providers array in app/config/app.php
+(not required for laravel 5.5+)
 
 ```Machaven\LaravelCascadingConfig\CascadingConfigProvider::class,```
 
