@@ -21,7 +21,9 @@ What to take out of your .env file
 Why use cascading config files?
 --------
 
-Cascading configuration files allow you to keep a set of config files for every environment. All environment configs override the base configs in the config folder. This allows you to setup a static config for each environment.
+1. Cascading configuration files allow you to keep a set of config files for every environment. All environment configs override the base configs in the config folder. This allows you to setup a dynamic config for each environment.
+
+2. Settings changes can be recorded on pull requests. This prevents settings changes from being lost when only changed on the server .env file.
 
 Furthermore if you use the env() function in your config files, it will allow you to override any defaults in the config file with variables from the .env file if they exist.
 
