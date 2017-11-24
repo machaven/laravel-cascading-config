@@ -11,10 +11,8 @@ This forced me to rethink configuration and what is truly important inside an .e
 
 What to keep in your .env file
 
-* Stock laravel .env settings
+* Standard laravel .env settings
 * Sensitive information, like login credentials for other apis.
-* Settings that need to be changed in an emergency.
-
 
 What to take out of your .env file
 
@@ -71,6 +69,8 @@ return [
     'clientApi' => [
         'curlTimeout' => env('CLIENT_API_CURL_TIMEOUT', 5),
         'baseUrl' => env('CLIENT_API_BASE_URL', 'http://test.com/api/'),
+        'username' => env('CLIENT_API_USERNAME'), // Always read username and password from .env
+        'password' => env('CLIENT_API_PASSWORD'),
     ],
     'test' => env('TEST', 'prod'),
 ];
@@ -102,6 +102,8 @@ When APP_ENV is local:
      "clientApi" => [
        "curlTimeout" => 5, // This is merged from the config/example.php config file
        "baseUrl" => "http://test.local/api/",
+       "username" => "username in .env file",
+       "password" => "password in .env file",
      ],
      "test" => "local",
    ]
@@ -117,6 +119,8 @@ When APP_ENV is prod:
      "clientApi" => [
        "curlTimeout" => 5,
        "baseUrl" => "http://test.com/api/",
+       "username" => "username in .env file",
+       "password" => "password in .env file",
      ],
      "test" => "prod",
    ]
@@ -132,6 +136,8 @@ When APP_ENV is prod and TEST='ENV FILE' is added to .env file:
      "clientApi" => [
        "curlTimeout" => 5,
        "baseUrl" => "http://test.com/api/",
+       "username" => "username in .env file",
+       "password" => "password in .env file",
      ],
      "test" => "ENV FILE",
    ]
