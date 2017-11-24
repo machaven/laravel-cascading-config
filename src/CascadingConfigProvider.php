@@ -30,7 +30,20 @@ class CascadingConfigProvider extends ServiceProvider
             return;
         }
 
-        config($config);
+        foreach ($config as $key => $new) {
+            $original = config($key, null);
+
+            if (null !== $original) {
+                $merged = array_replace_recursive($original, $new);
+                config([$key => $merged]);
+
+                continue;
+            }
+
+            if (null === $original) {
+                config([$key => $new]);
+            }
+        }
     }
 
     /**
