@@ -136,4 +136,4 @@ When APP_ENV is prod and TEST='ENV FILE' is added to .env file:
    ]
 ```
 
-The test key is overridden here by the TEST variable in th .env file. This is because we are using the env() helper in our config files to override settings for any environment; if they exit in the .env.
+The test key is overridden here by the TEST variable in the .env file. This is because we are using the env() helper in our config files to override settings for any environment; if they exit in the .env.
