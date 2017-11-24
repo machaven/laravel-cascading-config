@@ -41,7 +41,7 @@ After installing, add the ServiceProvider to the providers array in app/config/a
 How this works
 ----
 
-The service provider will check if the directory exists for the environment configured in your .env file. If the environment folder exists, then all configuration files will be read merged ont op of the the configuration from the config folder.
+The service provider will check if the directory exists for the environment configured in your .env file. If the environment folder exists, then all configuration files will be read from it and merged over the configurations from the config folder.
 
 Example for cascading config files
 ----
