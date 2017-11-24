@@ -90,7 +90,7 @@ return [
 
 In the local configuration above, we are not overriding the curlTimeout array key.
 
-Config Results
+Example config results
 ----
 
 When APP_ENV is local:
