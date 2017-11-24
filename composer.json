@@ -1,0 +1,32 @@
+{
+  "name": "machaven/laravel-cascading-config",
+  "description": "Multiple cascading environmental configuration files support for Laravel 5",
+  "keywords": ["laravel", "config", "environment", "cascading"],
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "David Olivier",
+      "email": "machaven@gmail.com"
+    }
+  ],
+  "require": {
+    "php": ">=5.5.9"
+  },
+  "type": "package",
+  "require-dev": {},
+  "autoload": {
+    "psr-0": {
+      "Machaven\\LaravelCascadingConfig\\": "src/"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Machaven\\LaravelCascadingConfig\\CascadingConfigProvider"
+      ]
+    }
+  },
+  "config": {
+    "sort-packages": true
+  }
+}
